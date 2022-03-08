@@ -20,6 +20,9 @@ module.exports = {
       sm: "0.707rem",
     },
     extend: {
+      maxWidth: {
+        page: "91.25rem",
+      },
       colors: {
         "brand-primary": {
           DEFAULT: "#259314",

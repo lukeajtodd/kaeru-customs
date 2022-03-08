@@ -1,7 +1,7 @@
 <template>
   <header class="fixed z-50 w-full py-2">
     <div
-      class="grid items-center w-full grid-cols-12 px-4 pt-2 md:pt-0 mx-auto"
+      class="max-w-page grid items-center w-full grid-cols-12 px-4 py-2 md:py-8 lg:py-12 mx-auto"
     >
       <div class="col-span-10 md:col-span-12">
         <nuxt-link to="/">
@@ -30,7 +30,10 @@
         </svg>
       </button>
     </div>
-    <div class="grid items-center grid-cols-12 px-4 mx-auto">
+    <hr class="border-2 border-brand-primary mb-4 lg:mb-8" />
+    <div
+      class="w-full max-w-page grid items-center grid-cols-12 px-4 md:pb-4 lg:pb-8 mx-auto"
+    >
       <div class="col-span-6">
         <NavBar class="hidden md:block" />
       </div>
