@@ -16,6 +16,21 @@ export default defineNuxtConfig({
         href: "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@300;400;500;600;700&display=swap",
         rel: "stylesheet",
       },
+      { rel: "preconnect", href: "https://app.snipcart.com" },
+      { rel: "preconnect", href: "https://cdn.snipcart.com" },
+      {
+        rel: "stylesheet",
+        href: "https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css",
+      },
     ],
+    script: [
+      {
+        src: "https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js",
+        async: true,
+      },
+    ],
+  },
+  publicRuntimeConfig: {
+    API_URL: process.env.API_URL,
   },
 });
