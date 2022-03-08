@@ -6,17 +6,17 @@
       <li
         class="text-base font-regular transition-colors text-black font-heading hover:text-brand-primary"
       >
-        <nuxt-link to="/">Shop</nuxt-link>
+        <nuxt-link to="/shop">Shop</nuxt-link>
       </li>
       <li
         class="text-base font-regular transition-colors text-black font-heading hover:text-brand-primary"
       >
-        <nuxt-link to="/">About</nuxt-link>
+        <nuxt-link to="/about">About</nuxt-link>
       </li>
       <li
         class="text-base font-regular transition-colors text-black font-heading hover:text-brand-primary"
       >
-        <nuxt-link to="/">FAQs</nuxt-link>
+        <nuxt-link to="/faqs">FAQs</nuxt-link>
       </li>
     </ul>
   </nav>
