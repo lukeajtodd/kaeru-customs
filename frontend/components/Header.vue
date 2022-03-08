@@ -30,11 +30,11 @@
         </svg>
       </button>
     </div>
-    <div class="px-4 mx-auto">
+    <div class="grid items-center grid-cols-12 px-4 mx-auto">
       <div class="col-span-6">
         <NavBar class="hidden md:block" />
       </div>
-      <div class="flex items-center justify-end col-span-3">
+      <div class="flex items-center justify-end col-span-6">
         <CartInfo />
       </div>
     </div>

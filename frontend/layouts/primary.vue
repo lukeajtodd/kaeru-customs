@@ -1,7 +1,7 @@
 <template>
   <div class="relative font-body">
     <Header />
-    <div class="pt-48">
+    <div class="pt-48 lg:pt-64">
       <slot />
     </div>
   </div>
