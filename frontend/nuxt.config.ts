@@ -32,5 +32,7 @@ export default defineNuxtConfig({
   },
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,
+    FB_URL: process.env.FB_URL,
+    INSTA_URL: process.env.INSTA_URL,
   },
 });

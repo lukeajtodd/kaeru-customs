@@ -26,6 +26,16 @@ module.exports = {
       colors: {
         "brand-primary": {
           DEFAULT: "#259314",
+          50: "#E3FBE0",
+          100: "#CBF7C5",
+          200: "#94EE86",
+          300: "#60E74B",
+          400: "#34CE1C",
+          500: "#259314",
+          600: "#1D7510",
+          700: "#175A0C",
+          800: "#0F3A08",
+          900: "#081F04",
         },
         "brand-secondary": {
           DEFAULT: "#C4C4C4",

@@ -1,12 +1,16 @@
 <template>
   <header class="fixed z-50 w-full py-2">
     <div
-      class="max-w-page grid items-center w-full grid-cols-12 px-4 py-2 md:py-8 lg:py-12 mx-auto"
+      class="max-w-page grid items-center w-full grid-cols-12 px-4 pt-2 pb-4 md:py-8 lg:py-12 mx-auto"
     >
-      <div class="col-span-10 md:col-span-12">
+      <div class="col-span-10 md:col-span-6">
         <nuxt-link to="/">
           <Logo class="text-xl md:text-2xl lg:text-3xl" />
         </nuxt-link>
+      </div>
+
+      <div class="hidden md:block col-span-6 justify-self-end pr-12">
+        <SocialContact />
       </div>
 
       <button
