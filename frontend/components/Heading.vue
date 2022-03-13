@@ -26,7 +26,7 @@ const classes = computed(() => {
   const styleClasses = {
     h1: "pb-8 text-3xl font-bold tracking-wider font-heading leading-none",
     h2: "pb-6 text-2xl font-bold tracking-wider font-heading leading-none",
-    h3: "text-xl leading-none font-extralight",
+    h3: "pb-6 text-xl font-bold leading-none font-heading",
     h4: "pb-4 text-lg font-bold tracking-wider font-heading leading-none",
   };
   return ` ${styleClasses[props.fontStyle]} ${props.color}`;

@@ -29,8 +29,8 @@
 </template>
 
 <script setup>
-const { data: products } = await useFetch("http://localhost:1337/api/products");
-console.log(products.value);
+const config = useRuntimeConfig();
+const { data: products } = await useFetch(`${config.API_URL}/api/products`);
 definePageMeta({
   layout: false,
   title: "Home",
