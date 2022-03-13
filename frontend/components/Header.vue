@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed z-50 w-full py-2">
+  <header class="w-full pt-2 pb-4">
     <div
       class="max-w-page grid items-center w-full grid-cols-12 px-4 pt-2 pb-4 md:py-8 lg:py-12 mx-auto"
     >
@@ -15,7 +15,7 @@
 
       <button
         title="Menu"
-        class="col-span-2 inline-flex justify-end p-1 ml-4"
+        class="col-span-2 inline-flex justify-end ml-4"
         @click="mobileMenuOpen = true"
       >
         <svg
