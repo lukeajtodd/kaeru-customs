@@ -5,9 +5,9 @@
   >
     <Heading tag="h2" font-style="h4" color="text-black">{{ title }}</Heading>
     <p>{{ description }}</p>
-    <div class="flex justify-between items-center gap-4 mt-4">
-      <data class="font-bold" :value="price">{{ formattedPrice }}</data>
-    </div>
+    <data class="font-bold mt-4 block w-full flex justify-end" :value="price">{{
+      formattedPrice
+    }}</data>
   </nuxt-link>
 </template>
 
