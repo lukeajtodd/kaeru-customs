@@ -9,7 +9,7 @@
         </nuxt-link>
       </div>
 
-      <div class="hidden md:block col-span-6 justify-self-end pr-12">
+      <div class="hidden md:block col-span-6 justify-self-end">
         <SocialContact />
       </div>
 

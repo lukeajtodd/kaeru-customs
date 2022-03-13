@@ -9,11 +9,7 @@
       </a>
     </div>
     <div>
-      <button
-        class="bg-brand-primary hover:bg-brand-primary-600 focus:bg-brand-primary-600 active:bg-brand-primary-600 text-white uppercase font-bold tracking-wider py-2 px-6 rounded"
-      >
-        Get in touch
-      </button>
+      <Button> Get in touch </Button>
     </div>
   </div>
 </template>

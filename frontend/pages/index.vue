@@ -13,5 +13,6 @@
 const { data: products } = await useFetch("http://localhost:1337/api/products");
 definePageMeta({
   layout: false,
+  title: "Home",
 });
 </script>
