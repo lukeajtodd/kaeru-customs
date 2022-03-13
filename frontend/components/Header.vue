@@ -1,7 +1,7 @@
 <template>
-  <header class="w-full pt-2 pb-4">
-    <div
-      class="max-w-page grid items-center w-full grid-cols-12 px-4 pt-2 pb-4 md:py-8 lg:py-12 mx-auto"
+  <header class="w-full pt-2 pb-4 md:pb-0">
+    <Container
+      class="grid items-center w-full grid-cols-12 gap-4 pt-2 pb-4 md:py-8 lg:py-12"
     >
       <div class="col-span-10 md:col-span-6">
         <nuxt-link to="/">
@@ -33,18 +33,16 @@
           />
         </svg>
       </button>
-    </div>
+    </Container>
     <hr class="border-2 border-brand-primary mb-4 lg:mb-8" />
-    <div
-      class="w-full max-w-page grid items-center grid-cols-12 px-4 md:pb-4 lg:pb-8 mx-auto"
-    >
+    <Container class="grid items-center grid-cols-12 md:pb-4 lg:pb-8">
       <div class="col-span-6">
         <NavBar class="hidden md:block" />
       </div>
       <div class="flex items-center justify-end col-span-6">
         <CartInfo />
       </div>
-    </div>
+    </Container>
     <transition name="menu">
       <MobileMenu v-if="mobileMenuOpen" @close="mobileMenuOpen = false" />
     </transition>
