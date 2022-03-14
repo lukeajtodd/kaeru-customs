@@ -1,14 +1,6 @@
 <template>
   <div class="grid grid-cols-12 items-center bg-white p-6">
-    <div class="relative col-span-6 xl:col-span-4 aspect-w-1 aspect-h-1">
-      <div
-        v-if="instantBuy"
-        class="bg-brand-primary h-10 absolute z-10 top-0 left-0 flex items-center justify-end px-4"
-      >
-        <span class="uppercase text-white font-bold">Instant Buy</span>
-      </div>
-      <img class="object-center object-cover" :src="imageUrl" :alt="title" />
-    </div>
+    <ProductImage :product="product" :imageUrl="imageUrl" />
     <div class="pl-6 col-span-6 xl:col-span-8">
       <Heading tag="h2" font-style="h3" color="text-black">{{ title }}</Heading>
       <p>{{ description }}</p>
@@ -30,57 +22,12 @@
 
 <script lang="ts" setup>
 import { toRefs } from "vue";
-
-interface ImageItem {
-  id: number;
-  attributes: {
-    url: string;
-    formats: {
-      small?: {
-        url: string;
-      };
-      medium?: {
-        url: string;
-      };
-      large?: {
-        url: string;
-      };
-    };
-  };
-}
-
-interface Product {
-  id: number;
-  attributes: {
-    Title: string;
-    Description: string;
-    Price: number;
-    InstantBuy: boolean;
-    Image: {
-      data: ImageItem[];
-    };
-  };
-}
+import { getImageUrl } from "@/helpers/imageUrl";
+import type { Product } from "@/types/Product";
 
 const props = defineProps<{
   product: Product;
 }>();
-
-const getImageUrl = (imageData) => {
-  return imageData.map(({ attributes }) => {
-    if (attributes.format) {
-      return {
-        small: attributes.format?.small.url,
-        medium: attributes.format?.medium.url,
-        large: attributes.format?.large.url,
-      };
-    }
-
-    return {
-      default: attributes.url,
-    };
-  });
-};
 
 const config = useRuntimeConfig();
 // TODO Rework to allow for multiple images and selecting what is ideal

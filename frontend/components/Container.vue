@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 withDefaults(
   defineProps<{
-    tag: string;
+    tag?: string;
   }>(),
   {
     tag: "div",
