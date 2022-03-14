@@ -26,7 +26,7 @@ const props = defineProps({
 const classes = computed(() => {
   const themeClasses = {
     primary:
-      "bg-brand-primary hover:bg-brand-primary-600 focus:bg-brand-primary-600 active:bg-brand-primary-600 text-white uppercase tracking-widest py-2 px-6 rounded",
+      "bg-brand-primary hover:bg-brand-primary-600 focus:bg-brand-primary-600 active:bg-brand-primary-600 text-white uppercase tracking-widest py-3 px-6 rounded",
     secondary:
       "bg-brand-secondary hover:bg-brand-secondary-600 focus:bg-brand-secondary-600 active:bg-brand-secondary-600 text-white uppercase tracking-widest py-2 px-6 rounded",
   };

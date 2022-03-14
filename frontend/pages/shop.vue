@@ -16,10 +16,9 @@ const config = useRuntimeConfig();
 const { data: products } = await useFetch(
   `${config.API_URL}/api/products?populate=*`
 );
-console.log(products.value);
+console.log(products.value.data);
 definePageMeta({
   layout: false,
   title: "Shop",
 });
 </script>
-?populate=*
