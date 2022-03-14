@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="primary">
+  <div>
     <Container class="grid grid-cols-12 gap-2 pt-32 pb-24 md:gap-12">
       <div class="col-span-12 md:col-span-6 lg:col-span-5">
         <ProductImage :product="product.data" />
@@ -16,7 +16,15 @@
         </p>
 
         <div class="flex items-center">
-          <Button @update:modelValue="pageTitle = $event">Add to basket</Button>
+          <Button
+            class="snipcart-add-item"
+            :data-item-id="product.data.id"
+            :data-item-price="product.data.attributes.Price"
+            :data-item-description="product.data.attributes.Description"
+            :data-item-name="product.data.attributes.Title"
+            :data-item-image="imageUrl"
+            >Add to basket</Button
+          >
         </div>
       </div>
     </Container>
@@ -26,20 +34,30 @@
       >
       <ProductReel :products="products.data" />
     </Container>
-  </NuxtLayout>
+  </div>
 </template>
 
 <script setup>
-import { unref } from "vue";
+import { getImageUrl } from "@/helpers/imageUrl";
+
 const route = useRoute();
 const config = useRuntimeConfig();
 
 const { data: products } = await useFetch(
   `${config.API_URL}/api/products?populate=*`
 );
+
 const { data: product } = await useFetch(
   `${config.API_URL}/api/products/${route.params.id}?populate=*`
 );
+
 console.log(product.value);
+
+const imageUrl = computed(() => {
+  return `${config.API_URL}${
+    getImageUrl(product.value.data.attributes.Image.data)[0].default
+  }`;
+});
+
 const formattedPrice = useCurrency(product.value.data.attributes.Price);
 </script>

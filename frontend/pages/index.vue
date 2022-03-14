@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="primary">
+  <div>
     <div class="aspect-w-9 aspect-h-4 lg:aspect-w-16">
       <video
         class="object-center object-cover w-full h-full"
@@ -16,7 +16,7 @@
       </video>
     </div>
     <ProductReel :products="products.data" />
-  </NuxtLayout>
+  </div>
 </template>
 
 <script setup>

@@ -8,7 +8,15 @@
         formattedPrice
       }}</data>
       <template v-if="instantBuy">
-        <Button weight="medium" class="flex items-center">
+        <Button
+          class="flex items-center snipcart-add-item"
+          :data-item-id="product.id"
+          :data-item-price="product.attributes.Price"
+          :data-item-description="product.attributes.Description"
+          :data-item-name="product.attributes.Title"
+          :data-item-image="imageUrl"
+          weight="medium"
+        >
           <IconsCart class="mr-2" />
           <span>Add to basket</span>
         </Button>

@@ -1,7 +1,7 @@
 <template>
   <div class="relative font-body">
     <Header />
-    <div class="">
+    <div>
       <slot />
     </div>
     <Footer />
