@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const config = useRuntimeConfig();
 const { data: products } = await useFetch(
   `${config.API_URL}/api/products?populate=*`
